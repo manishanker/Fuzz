@@ -1,0 +1,8 @@
+Fuzzing {image_id}
+image id is a collection of numbers from 0-9 , a,b,c,d,e,f
+1.image-id format is 8-4-4-8. ow to fuzz these inputs we can have all the combinations of 16^32
+2.Above method is giving the fuzz data directly to the input.
+3. Next case would be to have a templeate.since glance only accepts the image ids that are already created in image resource.
+4. Template can have the combinations of valid imageid's. It can have the combinations of different image ids or same image id repeated multiple times
+5. should include timeout b/w each api fuzz call
+6. Since tags can be anything, fuzz payload from the user can be directly given where ever tag is expected
